@@ -43,7 +43,22 @@
   <div id="container">
     <div id="wrap">
       <header id="header">
-  <div id="banner"></div>
+  <div id="banner">
+    
+      <div class="banner-slides">
+        
+          <div class="banner-slide is-active" style="background-image:url('/img/banner/banner-1.jpg');background-position:center 62%;"></div>
+        
+          <div class="banner-slide" style="background-image:url('/img/banner/banner-2.jpg');background-position:center 50%;"></div>
+        
+          <div class="banner-slide" style="background-image:url('/img/banner/banner-3.jpg');background-position:center 20%;"></div>
+        
+          <div class="banner-slide" style="background-image:url('/img/banner/banner-4.jpg');background-position:center 0%;"></div>
+        
+      </div>
+    
+    <div class="banner-mask"></div>
+  </div>
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       
@@ -88,6 +103,20 @@
     </div>
   </div>
 </header>
+
+<script>
+(function(){
+  var slides = document.querySelectorAll('#banner .banner-slide');
+  if (!slides.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var idx = 0;
+  setInterval(function(){
+    slides[idx].classList.remove('is-active');
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add('is-active');
+  }, 6000);
+})();
+</script>
+
 
       <div class="outer">
         <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
@@ -135,7 +164,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://007wwww123.github.io/about/index.html" data-id="cmvw9dvhy0002dsnidu8s07v1" data-title="关于" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://007wwww123.github.io/about/index.html" data-id="cmvxfv2qt0002igni8st6hn84" data-title="关于" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       

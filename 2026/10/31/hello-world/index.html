@@ -41,7 +41,22 @@
   <div id="container">
     <div id="wrap">
       <header id="header">
-  <div id="banner"></div>
+  <div id="banner">
+    
+      <div class="banner-slides">
+        
+          <div class="banner-slide is-active" style="background-image:url('/img/banner/banner-1.jpg');background-position:center 62%;"></div>
+        
+          <div class="banner-slide" style="background-image:url('/img/banner/banner-2.jpg');background-position:center 50%;"></div>
+        
+          <div class="banner-slide" style="background-image:url('/img/banner/banner-3.jpg');background-position:center 20%;"></div>
+        
+          <div class="banner-slide" style="background-image:url('/img/banner/banner-4.jpg');background-position:center 0%;"></div>
+        
+      </div>
+    
+    <div class="banner-mask"></div>
+  </div>
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       
@@ -87,6 +102,20 @@
   </div>
 </header>
 
+<script>
+(function(){
+  var slides = document.querySelectorAll('#banner .banner-slide');
+  if (!slides.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var idx = 0;
+  setInterval(function(){
+    slides[idx].classList.remove('is-active');
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add('is-active');
+  }, 6000);
+})();
+</script>
+
+
       <div class="outer">
         <section id="main"><article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
@@ -127,7 +156,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://007wwww123.github.io/2026/10/31/hello-world/" data-id="cmvw9dvhv0001dsni92qm75t0" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://007wwww123.github.io/2026/10/31/hello-world/" data-id="cmvxfv2qq0001ignideofavl7" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
